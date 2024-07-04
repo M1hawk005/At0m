@@ -1,1 +1,0 @@
-/usr/bin/c++ -rdynamic CMakeFiles/atom.dir/glad.c.o CMakeFiles/atom.dir/atom.cpp.o -o atom  /usr/local/lib/libglfw3.a /usr/lib/x86_64-linux-gnu/libGL.so -Wl,-Bstatic -lrt -Wl,-Bdynamic -lm -ldl 

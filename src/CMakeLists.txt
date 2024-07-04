@@ -8,8 +8,17 @@ find_package(glfw3 REQUIRED)
 # Find OpenGL (GLAD is included with GLFW)
 find_package(OpenGL REQUIRED)
 
-# Add executable
-add_executable(atom glad.c atom.cpp)
+# List of source files
+set(SOURCES
+    main.cpp
+    atom_launcher.cpp
+    atom.cpp
+    input_handler.cpp
+    glad.c
+)
+
+# Create executable
+add_executable(atom ${SOURCES})
 
 # Link libraries
 target_link_libraries(atom PRIVATE glfw OpenGL::GL)

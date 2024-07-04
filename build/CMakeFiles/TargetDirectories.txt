@@ -1,2 +1,3 @@
+/mnt/x/At0m/build/CMakeFiles/atom.dir
 /mnt/x/At0m/build/CMakeFiles/edit_cache.dir
 /mnt/x/At0m/build/CMakeFiles/rebuild_cache.dir

@@ -1,3 +1,0 @@
-/mnt/x/At0m/src/build/CMakeFiles/atom.dir
-/mnt/x/At0m/src/build/CMakeFiles/edit_cache.dir
-/mnt/x/At0m/src/build/CMakeFiles/rebuild_cache.dir
