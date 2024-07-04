@@ -125,19 +125,33 @@ CMakeFiles/atom.dir/input_handler.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/atom.dir/input_handler.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/x/At0m/src/input_handler.cpp -o CMakeFiles/atom.dir/input_handler.cpp.s
 
-CMakeFiles/atom.dir/glad.c.o: CMakeFiles/atom.dir/flags.make
-CMakeFiles/atom.dir/glad.c.o: /mnt/x/At0m/src/glad.c
-CMakeFiles/atom.dir/glad.c.o: CMakeFiles/atom.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/x/At0m/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/atom.dir/glad.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/atom.dir/glad.c.o -MF CMakeFiles/atom.dir/glad.c.o.d -o CMakeFiles/atom.dir/glad.c.o -c /mnt/x/At0m/src/glad.c
+CMakeFiles/atom.dir/mnt/x/At0m/dependencies/glad/src/glad.c.o: CMakeFiles/atom.dir/flags.make
+CMakeFiles/atom.dir/mnt/x/At0m/dependencies/glad/src/glad.c.o: /mnt/x/At0m/dependencies/glad/src/glad.c
+CMakeFiles/atom.dir/mnt/x/At0m/dependencies/glad/src/glad.c.o: CMakeFiles/atom.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/x/At0m/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/atom.dir/mnt/x/At0m/dependencies/glad/src/glad.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/atom.dir/mnt/x/At0m/dependencies/glad/src/glad.c.o -MF CMakeFiles/atom.dir/mnt/x/At0m/dependencies/glad/src/glad.c.o.d -o CMakeFiles/atom.dir/mnt/x/At0m/dependencies/glad/src/glad.c.o -c /mnt/x/At0m/dependencies/glad/src/glad.c
 
-CMakeFiles/atom.dir/glad.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/atom.dir/glad.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/x/At0m/src/glad.c > CMakeFiles/atom.dir/glad.c.i
+CMakeFiles/atom.dir/mnt/x/At0m/dependencies/glad/src/glad.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/atom.dir/mnt/x/At0m/dependencies/glad/src/glad.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/x/At0m/dependencies/glad/src/glad.c > CMakeFiles/atom.dir/mnt/x/At0m/dependencies/glad/src/glad.c.i
 
-CMakeFiles/atom.dir/glad.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/atom.dir/glad.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/x/At0m/src/glad.c -o CMakeFiles/atom.dir/glad.c.s
+CMakeFiles/atom.dir/mnt/x/At0m/dependencies/glad/src/glad.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/atom.dir/mnt/x/At0m/dependencies/glad/src/glad.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/x/At0m/dependencies/glad/src/glad.c -o CMakeFiles/atom.dir/mnt/x/At0m/dependencies/glad/src/glad.c.s
+
+CMakeFiles/atom.dir/shader/shader.cpp.o: CMakeFiles/atom.dir/flags.make
+CMakeFiles/atom.dir/shader/shader.cpp.o: /mnt/x/At0m/src/shader/shader.cpp
+CMakeFiles/atom.dir/shader/shader.cpp.o: CMakeFiles/atom.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/x/At0m/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/atom.dir/shader/shader.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/atom.dir/shader/shader.cpp.o -MF CMakeFiles/atom.dir/shader/shader.cpp.o.d -o CMakeFiles/atom.dir/shader/shader.cpp.o -c /mnt/x/At0m/src/shader/shader.cpp
+
+CMakeFiles/atom.dir/shader/shader.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/atom.dir/shader/shader.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/x/At0m/src/shader/shader.cpp > CMakeFiles/atom.dir/shader/shader.cpp.i
+
+CMakeFiles/atom.dir/shader/shader.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/atom.dir/shader/shader.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/x/At0m/src/shader/shader.cpp -o CMakeFiles/atom.dir/shader/shader.cpp.s
 
 # Object files for target atom
 atom_OBJECTS = \
@@ -145,7 +159,8 @@ atom_OBJECTS = \
 "CMakeFiles/atom.dir/atom_launcher.cpp.o" \
 "CMakeFiles/atom.dir/atom.cpp.o" \
 "CMakeFiles/atom.dir/input_handler.cpp.o" \
-"CMakeFiles/atom.dir/glad.c.o"
+"CMakeFiles/atom.dir/mnt/x/At0m/dependencies/glad/src/glad.c.o" \
+"CMakeFiles/atom.dir/shader/shader.cpp.o"
 
 # External object files for target atom
 atom_EXTERNAL_OBJECTS =
@@ -154,14 +169,15 @@ atom: CMakeFiles/atom.dir/main.cpp.o
 atom: CMakeFiles/atom.dir/atom_launcher.cpp.o
 atom: CMakeFiles/atom.dir/atom.cpp.o
 atom: CMakeFiles/atom.dir/input_handler.cpp.o
-atom: CMakeFiles/atom.dir/glad.c.o
+atom: CMakeFiles/atom.dir/mnt/x/At0m/dependencies/glad/src/glad.c.o
+atom: CMakeFiles/atom.dir/shader/shader.cpp.o
 atom: CMakeFiles/atom.dir/build.make
 atom: /usr/local/lib/libglfw3.a
 atom: /usr/lib/x86_64-linux-gnu/libGL.so
 atom: /usr/lib/x86_64-linux-gnu/librt.a
 atom: /usr/lib/x86_64-linux-gnu/libm.so
 atom: CMakeFiles/atom.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/x/At0m/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable atom"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/x/At0m/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable atom"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/atom.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

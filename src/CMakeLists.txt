@@ -14,7 +14,8 @@ set(SOURCES
     atom_launcher.cpp
     atom.cpp
     input_handler.cpp
-    glad.c
+    ../dependencies/glad/src/glad.c
+    shader/shader.cpp
 )
 
 # Create executable

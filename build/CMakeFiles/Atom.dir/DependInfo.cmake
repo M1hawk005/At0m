@@ -8,11 +8,12 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/mnt/x/At0m/src/glad.c" "CMakeFiles/atom.dir/glad.c.o" "gcc" "CMakeFiles/atom.dir/glad.c.o.d"
+  "/mnt/x/At0m/dependencies/glad/src/glad.c" "CMakeFiles/atom.dir/mnt/x/At0m/dependencies/glad/src/glad.c.o" "gcc" "CMakeFiles/atom.dir/mnt/x/At0m/dependencies/glad/src/glad.c.o.d"
   "/mnt/x/At0m/src/atom.cpp" "CMakeFiles/atom.dir/atom.cpp.o" "gcc" "CMakeFiles/atom.dir/atom.cpp.o.d"
   "/mnt/x/At0m/src/atom_launcher.cpp" "CMakeFiles/atom.dir/atom_launcher.cpp.o" "gcc" "CMakeFiles/atom.dir/atom_launcher.cpp.o.d"
   "/mnt/x/At0m/src/input_handler.cpp" "CMakeFiles/atom.dir/input_handler.cpp.o" "gcc" "CMakeFiles/atom.dir/input_handler.cpp.o.d"
   "/mnt/x/At0m/src/main.cpp" "CMakeFiles/atom.dir/main.cpp.o" "gcc" "CMakeFiles/atom.dir/main.cpp.o.d"
+  "/mnt/x/At0m/src/shader/shader.cpp" "CMakeFiles/atom.dir/shader/shader.cpp.o" "gcc" "CMakeFiles/atom.dir/shader/shader.cpp.o.d"
   )
 
 # Targets to which this target links.

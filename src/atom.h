@@ -1,4 +1,4 @@
-#ifdef ATOM_H
+#ifndef ATOM_H
 #define ATOM_H
 #include<iostream>
 #include <array>

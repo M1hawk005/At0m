@@ -177,30 +177,6 @@ atom_launcher.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/atom.dir/build.make CMakeFiles/atom.dir/atom_launcher.cpp.s
 .PHONY : atom_launcher.cpp.s
 
-glad.o: glad.c.o
-.PHONY : glad.o
-
-# target to build an object file
-glad.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/atom.dir/build.make CMakeFiles/atom.dir/glad.c.o
-.PHONY : glad.c.o
-
-glad.i: glad.c.i
-.PHONY : glad.i
-
-# target to preprocess a source file
-glad.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/atom.dir/build.make CMakeFiles/atom.dir/glad.c.i
-.PHONY : glad.c.i
-
-glad.s: glad.c.s
-.PHONY : glad.s
-
-# target to generate assembly for a file
-glad.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/atom.dir/build.make CMakeFiles/atom.dir/glad.c.s
-.PHONY : glad.c.s
-
 input_handler.o: input_handler.cpp.o
 .PHONY : input_handler.o
 
@@ -249,6 +225,54 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/atom.dir/build.make CMakeFiles/atom.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+mnt/x/At0m/dependencies/glad/src/glad.o: mnt/x/At0m/dependencies/glad/src/glad.c.o
+.PHONY : mnt/x/At0m/dependencies/glad/src/glad.o
+
+# target to build an object file
+mnt/x/At0m/dependencies/glad/src/glad.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atom.dir/build.make CMakeFiles/atom.dir/mnt/x/At0m/dependencies/glad/src/glad.c.o
+.PHONY : mnt/x/At0m/dependencies/glad/src/glad.c.o
+
+mnt/x/At0m/dependencies/glad/src/glad.i: mnt/x/At0m/dependencies/glad/src/glad.c.i
+.PHONY : mnt/x/At0m/dependencies/glad/src/glad.i
+
+# target to preprocess a source file
+mnt/x/At0m/dependencies/glad/src/glad.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atom.dir/build.make CMakeFiles/atom.dir/mnt/x/At0m/dependencies/glad/src/glad.c.i
+.PHONY : mnt/x/At0m/dependencies/glad/src/glad.c.i
+
+mnt/x/At0m/dependencies/glad/src/glad.s: mnt/x/At0m/dependencies/glad/src/glad.c.s
+.PHONY : mnt/x/At0m/dependencies/glad/src/glad.s
+
+# target to generate assembly for a file
+mnt/x/At0m/dependencies/glad/src/glad.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atom.dir/build.make CMakeFiles/atom.dir/mnt/x/At0m/dependencies/glad/src/glad.c.s
+.PHONY : mnt/x/At0m/dependencies/glad/src/glad.c.s
+
+shader/shader.o: shader/shader.cpp.o
+.PHONY : shader/shader.o
+
+# target to build an object file
+shader/shader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atom.dir/build.make CMakeFiles/atom.dir/shader/shader.cpp.o
+.PHONY : shader/shader.cpp.o
+
+shader/shader.i: shader/shader.cpp.i
+.PHONY : shader/shader.i
+
+# target to preprocess a source file
+shader/shader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atom.dir/build.make CMakeFiles/atom.dir/shader/shader.cpp.i
+.PHONY : shader/shader.cpp.i
+
+shader/shader.s: shader/shader.cpp.s
+.PHONY : shader/shader.s
+
+# target to generate assembly for a file
+shader/shader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atom.dir/build.make CMakeFiles/atom.dir/shader/shader.cpp.s
+.PHONY : shader/shader.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -264,15 +288,18 @@ help:
 	@echo "... atom_launcher.o"
 	@echo "... atom_launcher.i"
 	@echo "... atom_launcher.s"
-	@echo "... glad.o"
-	@echo "... glad.i"
-	@echo "... glad.s"
 	@echo "... input_handler.o"
 	@echo "... input_handler.i"
 	@echo "... input_handler.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... mnt/x/At0m/dependencies/glad/src/glad.o"
+	@echo "... mnt/x/At0m/dependencies/glad/src/glad.i"
+	@echo "... mnt/x/At0m/dependencies/glad/src/glad.s"
+	@echo "... shader/shader.o"
+	@echo "... shader/shader.i"
+	@echo "... shader/shader.s"
 .PHONY : help
 
 
