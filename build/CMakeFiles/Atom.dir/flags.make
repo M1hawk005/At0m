@@ -5,13 +5,13 @@
 # compile CXX with /usr/bin/c++
 C_DEFINES = 
 
-C_INCLUDES = 
+C_INCLUDES = -I/mnt/x/At0m/src/../dependencies/imgui -I/mnt/x/At0m/src/../dependencies/imgui/backends
 
 C_FLAGS = 
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = 
+CXX_INCLUDES = -I/mnt/x/At0m/src/../dependencies/imgui -I/mnt/x/At0m/src/../dependencies/imgui/backends
 
 CXX_FLAGS = 
 

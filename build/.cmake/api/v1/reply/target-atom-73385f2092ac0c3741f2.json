@@ -11,7 +11,8 @@
 		"commands" : 
 		[
 			"add_executable",
-			"target_link_libraries"
+			"target_link_libraries",
+			"include_directories"
 		],
 		"files" : 
 		[
@@ -25,13 +26,25 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 22,
+				"line" : 34,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 25,
+				"line" : 37,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 11,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 12,
 				"parent" : 0
 			}
 		]
@@ -39,10 +52,15 @@
 	"compileGroups" : 
 	[
 		{
-			"compileCommandFragments" : 
+			"includes" : 
 			[
 				{
-					"fragment" : "-g"
+					"backtrace" : 3,
+					"path" : "/mnt/x/At0m/src/../dependencies/imgui"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "/mnt/x/At0m/src/../dependencies/imgui/backends"
 				}
 			],
 			"language" : "CXX",
@@ -52,14 +70,26 @@
 				1,
 				2,
 				3,
-				5
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12
 			]
 		},
 		{
-			"compileCommandFragments" : 
+			"includes" : 
 			[
 				{
-					"fragment" : "-g"
+					"backtrace" : 3,
+					"path" : "/mnt/x/At0m/src/../dependencies/imgui"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "/mnt/x/At0m/src/../dependencies/imgui/backends"
 				}
 			],
 			"language" : "C",
@@ -74,10 +104,6 @@
 	{
 		"commandFragments" : 
 		[
-			{
-				"fragment" : "-g",
-				"role" : "flags"
-			},
 			{
 				"fragment" : "-rdynamic",
 				"role" : "flags"
@@ -133,7 +159,14 @@
 				2,
 				3,
 				4,
-				5
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12
 			]
 		}
 	],
@@ -173,6 +206,48 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "shader/shader.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/mnt/x/At0m/dependencies/imgui/imgui.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/mnt/x/At0m/dependencies/imgui/imgui_demo.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/mnt/x/At0m/dependencies/imgui/imgui_draw.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/mnt/x/At0m/dependencies/imgui/imgui_widgets.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/mnt/x/At0m/dependencies/imgui/imgui_tables.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/mnt/x/At0m/dependencies/imgui/backends/imgui_impl_glfw.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/mnt/x/At0m/dependencies/imgui/backends/imgui_impl_opengl3.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

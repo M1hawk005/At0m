@@ -249,6 +249,174 @@ mnt/x/At0m/dependencies/glad/src/glad.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/atom.dir/build.make CMakeFiles/atom.dir/mnt/x/At0m/dependencies/glad/src/glad.c.s
 .PHONY : mnt/x/At0m/dependencies/glad/src/glad.c.s
 
+mnt/x/At0m/dependencies/imgui/backends/imgui_impl_glfw.o: mnt/x/At0m/dependencies/imgui/backends/imgui_impl_glfw.cpp.o
+.PHONY : mnt/x/At0m/dependencies/imgui/backends/imgui_impl_glfw.o
+
+# target to build an object file
+mnt/x/At0m/dependencies/imgui/backends/imgui_impl_glfw.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atom.dir/build.make CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/backends/imgui_impl_glfw.cpp.o
+.PHONY : mnt/x/At0m/dependencies/imgui/backends/imgui_impl_glfw.cpp.o
+
+mnt/x/At0m/dependencies/imgui/backends/imgui_impl_glfw.i: mnt/x/At0m/dependencies/imgui/backends/imgui_impl_glfw.cpp.i
+.PHONY : mnt/x/At0m/dependencies/imgui/backends/imgui_impl_glfw.i
+
+# target to preprocess a source file
+mnt/x/At0m/dependencies/imgui/backends/imgui_impl_glfw.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atom.dir/build.make CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/backends/imgui_impl_glfw.cpp.i
+.PHONY : mnt/x/At0m/dependencies/imgui/backends/imgui_impl_glfw.cpp.i
+
+mnt/x/At0m/dependencies/imgui/backends/imgui_impl_glfw.s: mnt/x/At0m/dependencies/imgui/backends/imgui_impl_glfw.cpp.s
+.PHONY : mnt/x/At0m/dependencies/imgui/backends/imgui_impl_glfw.s
+
+# target to generate assembly for a file
+mnt/x/At0m/dependencies/imgui/backends/imgui_impl_glfw.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atom.dir/build.make CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/backends/imgui_impl_glfw.cpp.s
+.PHONY : mnt/x/At0m/dependencies/imgui/backends/imgui_impl_glfw.cpp.s
+
+mnt/x/At0m/dependencies/imgui/backends/imgui_impl_opengl3.o: mnt/x/At0m/dependencies/imgui/backends/imgui_impl_opengl3.cpp.o
+.PHONY : mnt/x/At0m/dependencies/imgui/backends/imgui_impl_opengl3.o
+
+# target to build an object file
+mnt/x/At0m/dependencies/imgui/backends/imgui_impl_opengl3.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atom.dir/build.make CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/backends/imgui_impl_opengl3.cpp.o
+.PHONY : mnt/x/At0m/dependencies/imgui/backends/imgui_impl_opengl3.cpp.o
+
+mnt/x/At0m/dependencies/imgui/backends/imgui_impl_opengl3.i: mnt/x/At0m/dependencies/imgui/backends/imgui_impl_opengl3.cpp.i
+.PHONY : mnt/x/At0m/dependencies/imgui/backends/imgui_impl_opengl3.i
+
+# target to preprocess a source file
+mnt/x/At0m/dependencies/imgui/backends/imgui_impl_opengl3.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atom.dir/build.make CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/backends/imgui_impl_opengl3.cpp.i
+.PHONY : mnt/x/At0m/dependencies/imgui/backends/imgui_impl_opengl3.cpp.i
+
+mnt/x/At0m/dependencies/imgui/backends/imgui_impl_opengl3.s: mnt/x/At0m/dependencies/imgui/backends/imgui_impl_opengl3.cpp.s
+.PHONY : mnt/x/At0m/dependencies/imgui/backends/imgui_impl_opengl3.s
+
+# target to generate assembly for a file
+mnt/x/At0m/dependencies/imgui/backends/imgui_impl_opengl3.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atom.dir/build.make CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/backends/imgui_impl_opengl3.cpp.s
+.PHONY : mnt/x/At0m/dependencies/imgui/backends/imgui_impl_opengl3.cpp.s
+
+mnt/x/At0m/dependencies/imgui/imgui.o: mnt/x/At0m/dependencies/imgui/imgui.cpp.o
+.PHONY : mnt/x/At0m/dependencies/imgui/imgui.o
+
+# target to build an object file
+mnt/x/At0m/dependencies/imgui/imgui.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atom.dir/build.make CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui.cpp.o
+.PHONY : mnt/x/At0m/dependencies/imgui/imgui.cpp.o
+
+mnt/x/At0m/dependencies/imgui/imgui.i: mnt/x/At0m/dependencies/imgui/imgui.cpp.i
+.PHONY : mnt/x/At0m/dependencies/imgui/imgui.i
+
+# target to preprocess a source file
+mnt/x/At0m/dependencies/imgui/imgui.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atom.dir/build.make CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui.cpp.i
+.PHONY : mnt/x/At0m/dependencies/imgui/imgui.cpp.i
+
+mnt/x/At0m/dependencies/imgui/imgui.s: mnt/x/At0m/dependencies/imgui/imgui.cpp.s
+.PHONY : mnt/x/At0m/dependencies/imgui/imgui.s
+
+# target to generate assembly for a file
+mnt/x/At0m/dependencies/imgui/imgui.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atom.dir/build.make CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui.cpp.s
+.PHONY : mnt/x/At0m/dependencies/imgui/imgui.cpp.s
+
+mnt/x/At0m/dependencies/imgui/imgui_demo.o: mnt/x/At0m/dependencies/imgui/imgui_demo.cpp.o
+.PHONY : mnt/x/At0m/dependencies/imgui/imgui_demo.o
+
+# target to build an object file
+mnt/x/At0m/dependencies/imgui/imgui_demo.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atom.dir/build.make CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_demo.cpp.o
+.PHONY : mnt/x/At0m/dependencies/imgui/imgui_demo.cpp.o
+
+mnt/x/At0m/dependencies/imgui/imgui_demo.i: mnt/x/At0m/dependencies/imgui/imgui_demo.cpp.i
+.PHONY : mnt/x/At0m/dependencies/imgui/imgui_demo.i
+
+# target to preprocess a source file
+mnt/x/At0m/dependencies/imgui/imgui_demo.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atom.dir/build.make CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_demo.cpp.i
+.PHONY : mnt/x/At0m/dependencies/imgui/imgui_demo.cpp.i
+
+mnt/x/At0m/dependencies/imgui/imgui_demo.s: mnt/x/At0m/dependencies/imgui/imgui_demo.cpp.s
+.PHONY : mnt/x/At0m/dependencies/imgui/imgui_demo.s
+
+# target to generate assembly for a file
+mnt/x/At0m/dependencies/imgui/imgui_demo.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atom.dir/build.make CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_demo.cpp.s
+.PHONY : mnt/x/At0m/dependencies/imgui/imgui_demo.cpp.s
+
+mnt/x/At0m/dependencies/imgui/imgui_draw.o: mnt/x/At0m/dependencies/imgui/imgui_draw.cpp.o
+.PHONY : mnt/x/At0m/dependencies/imgui/imgui_draw.o
+
+# target to build an object file
+mnt/x/At0m/dependencies/imgui/imgui_draw.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atom.dir/build.make CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_draw.cpp.o
+.PHONY : mnt/x/At0m/dependencies/imgui/imgui_draw.cpp.o
+
+mnt/x/At0m/dependencies/imgui/imgui_draw.i: mnt/x/At0m/dependencies/imgui/imgui_draw.cpp.i
+.PHONY : mnt/x/At0m/dependencies/imgui/imgui_draw.i
+
+# target to preprocess a source file
+mnt/x/At0m/dependencies/imgui/imgui_draw.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atom.dir/build.make CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_draw.cpp.i
+.PHONY : mnt/x/At0m/dependencies/imgui/imgui_draw.cpp.i
+
+mnt/x/At0m/dependencies/imgui/imgui_draw.s: mnt/x/At0m/dependencies/imgui/imgui_draw.cpp.s
+.PHONY : mnt/x/At0m/dependencies/imgui/imgui_draw.s
+
+# target to generate assembly for a file
+mnt/x/At0m/dependencies/imgui/imgui_draw.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atom.dir/build.make CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_draw.cpp.s
+.PHONY : mnt/x/At0m/dependencies/imgui/imgui_draw.cpp.s
+
+mnt/x/At0m/dependencies/imgui/imgui_tables.o: mnt/x/At0m/dependencies/imgui/imgui_tables.cpp.o
+.PHONY : mnt/x/At0m/dependencies/imgui/imgui_tables.o
+
+# target to build an object file
+mnt/x/At0m/dependencies/imgui/imgui_tables.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atom.dir/build.make CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_tables.cpp.o
+.PHONY : mnt/x/At0m/dependencies/imgui/imgui_tables.cpp.o
+
+mnt/x/At0m/dependencies/imgui/imgui_tables.i: mnt/x/At0m/dependencies/imgui/imgui_tables.cpp.i
+.PHONY : mnt/x/At0m/dependencies/imgui/imgui_tables.i
+
+# target to preprocess a source file
+mnt/x/At0m/dependencies/imgui/imgui_tables.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atom.dir/build.make CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_tables.cpp.i
+.PHONY : mnt/x/At0m/dependencies/imgui/imgui_tables.cpp.i
+
+mnt/x/At0m/dependencies/imgui/imgui_tables.s: mnt/x/At0m/dependencies/imgui/imgui_tables.cpp.s
+.PHONY : mnt/x/At0m/dependencies/imgui/imgui_tables.s
+
+# target to generate assembly for a file
+mnt/x/At0m/dependencies/imgui/imgui_tables.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atom.dir/build.make CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_tables.cpp.s
+.PHONY : mnt/x/At0m/dependencies/imgui/imgui_tables.cpp.s
+
+mnt/x/At0m/dependencies/imgui/imgui_widgets.o: mnt/x/At0m/dependencies/imgui/imgui_widgets.cpp.o
+.PHONY : mnt/x/At0m/dependencies/imgui/imgui_widgets.o
+
+# target to build an object file
+mnt/x/At0m/dependencies/imgui/imgui_widgets.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atom.dir/build.make CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_widgets.cpp.o
+.PHONY : mnt/x/At0m/dependencies/imgui/imgui_widgets.cpp.o
+
+mnt/x/At0m/dependencies/imgui/imgui_widgets.i: mnt/x/At0m/dependencies/imgui/imgui_widgets.cpp.i
+.PHONY : mnt/x/At0m/dependencies/imgui/imgui_widgets.i
+
+# target to preprocess a source file
+mnt/x/At0m/dependencies/imgui/imgui_widgets.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atom.dir/build.make CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_widgets.cpp.i
+.PHONY : mnt/x/At0m/dependencies/imgui/imgui_widgets.cpp.i
+
+mnt/x/At0m/dependencies/imgui/imgui_widgets.s: mnt/x/At0m/dependencies/imgui/imgui_widgets.cpp.s
+.PHONY : mnt/x/At0m/dependencies/imgui/imgui_widgets.s
+
+# target to generate assembly for a file
+mnt/x/At0m/dependencies/imgui/imgui_widgets.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atom.dir/build.make CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_widgets.cpp.s
+.PHONY : mnt/x/At0m/dependencies/imgui/imgui_widgets.cpp.s
+
 shader/shader.o: shader/shader.cpp.o
 .PHONY : shader/shader.o
 
@@ -297,6 +465,27 @@ help:
 	@echo "... mnt/x/At0m/dependencies/glad/src/glad.o"
 	@echo "... mnt/x/At0m/dependencies/glad/src/glad.i"
 	@echo "... mnt/x/At0m/dependencies/glad/src/glad.s"
+	@echo "... mnt/x/At0m/dependencies/imgui/backends/imgui_impl_glfw.o"
+	@echo "... mnt/x/At0m/dependencies/imgui/backends/imgui_impl_glfw.i"
+	@echo "... mnt/x/At0m/dependencies/imgui/backends/imgui_impl_glfw.s"
+	@echo "... mnt/x/At0m/dependencies/imgui/backends/imgui_impl_opengl3.o"
+	@echo "... mnt/x/At0m/dependencies/imgui/backends/imgui_impl_opengl3.i"
+	@echo "... mnt/x/At0m/dependencies/imgui/backends/imgui_impl_opengl3.s"
+	@echo "... mnt/x/At0m/dependencies/imgui/imgui.o"
+	@echo "... mnt/x/At0m/dependencies/imgui/imgui.i"
+	@echo "... mnt/x/At0m/dependencies/imgui/imgui.s"
+	@echo "... mnt/x/At0m/dependencies/imgui/imgui_demo.o"
+	@echo "... mnt/x/At0m/dependencies/imgui/imgui_demo.i"
+	@echo "... mnt/x/At0m/dependencies/imgui/imgui_demo.s"
+	@echo "... mnt/x/At0m/dependencies/imgui/imgui_draw.o"
+	@echo "... mnt/x/At0m/dependencies/imgui/imgui_draw.i"
+	@echo "... mnt/x/At0m/dependencies/imgui/imgui_draw.s"
+	@echo "... mnt/x/At0m/dependencies/imgui/imgui_tables.o"
+	@echo "... mnt/x/At0m/dependencies/imgui/imgui_tables.i"
+	@echo "... mnt/x/At0m/dependencies/imgui/imgui_tables.s"
+	@echo "... mnt/x/At0m/dependencies/imgui/imgui_widgets.o"
+	@echo "... mnt/x/At0m/dependencies/imgui/imgui_widgets.i"
+	@echo "... mnt/x/At0m/dependencies/imgui/imgui_widgets.s"
 	@echo "... shader/shader.o"
 	@echo "... shader/shader.i"
 	@echo "... shader/shader.s"

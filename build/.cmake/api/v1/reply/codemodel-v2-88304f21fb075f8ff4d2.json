@@ -6,7 +6,7 @@
 			[
 				{
 					"build" : ".",
-					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"jsonFile" : "directory-.-f5ebdc15457944623624.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.0"
@@ -19,7 +19,7 @@
 					]
 				}
 			],
-			"name" : "Debug",
+			"name" : "",
 			"projects" : 
 			[
 				{
@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "atom::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-atom-Debug-cd08af56cddf6bed5864.json",
+					"jsonFile" : "target-atom-73385f2092ac0c3741f2.json",
 					"name" : "atom",
 					"projectIndex" : 0
 				}

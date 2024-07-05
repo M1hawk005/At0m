@@ -153,6 +153,104 @@ CMakeFiles/atom.dir/shader/shader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/atom.dir/shader/shader.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/x/At0m/src/shader/shader.cpp -o CMakeFiles/atom.dir/shader/shader.cpp.s
 
+CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui.cpp.o: CMakeFiles/atom.dir/flags.make
+CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui.cpp.o: /mnt/x/At0m/dependencies/imgui/imgui.cpp
+CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui.cpp.o: CMakeFiles/atom.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/x/At0m/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui.cpp.o -MF CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui.cpp.o.d -o CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui.cpp.o -c /mnt/x/At0m/dependencies/imgui/imgui.cpp
+
+CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/x/At0m/dependencies/imgui/imgui.cpp > CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui.cpp.i
+
+CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/x/At0m/dependencies/imgui/imgui.cpp -o CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui.cpp.s
+
+CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_demo.cpp.o: CMakeFiles/atom.dir/flags.make
+CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_demo.cpp.o: /mnt/x/At0m/dependencies/imgui/imgui_demo.cpp
+CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_demo.cpp.o: CMakeFiles/atom.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/x/At0m/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_demo.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_demo.cpp.o -MF CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_demo.cpp.o.d -o CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_demo.cpp.o -c /mnt/x/At0m/dependencies/imgui/imgui_demo.cpp
+
+CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_demo.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_demo.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/x/At0m/dependencies/imgui/imgui_demo.cpp > CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_demo.cpp.i
+
+CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_demo.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_demo.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/x/At0m/dependencies/imgui/imgui_demo.cpp -o CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_demo.cpp.s
+
+CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_draw.cpp.o: CMakeFiles/atom.dir/flags.make
+CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_draw.cpp.o: /mnt/x/At0m/dependencies/imgui/imgui_draw.cpp
+CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_draw.cpp.o: CMakeFiles/atom.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/x/At0m/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_draw.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_draw.cpp.o -MF CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_draw.cpp.o.d -o CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_draw.cpp.o -c /mnt/x/At0m/dependencies/imgui/imgui_draw.cpp
+
+CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_draw.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_draw.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/x/At0m/dependencies/imgui/imgui_draw.cpp > CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_draw.cpp.i
+
+CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_draw.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_draw.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/x/At0m/dependencies/imgui/imgui_draw.cpp -o CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_draw.cpp.s
+
+CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_widgets.cpp.o: CMakeFiles/atom.dir/flags.make
+CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_widgets.cpp.o: /mnt/x/At0m/dependencies/imgui/imgui_widgets.cpp
+CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_widgets.cpp.o: CMakeFiles/atom.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/x/At0m/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_widgets.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_widgets.cpp.o -MF CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_widgets.cpp.o.d -o CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_widgets.cpp.o -c /mnt/x/At0m/dependencies/imgui/imgui_widgets.cpp
+
+CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_widgets.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_widgets.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/x/At0m/dependencies/imgui/imgui_widgets.cpp > CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_widgets.cpp.i
+
+CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_widgets.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_widgets.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/x/At0m/dependencies/imgui/imgui_widgets.cpp -o CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_widgets.cpp.s
+
+CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_tables.cpp.o: CMakeFiles/atom.dir/flags.make
+CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_tables.cpp.o: /mnt/x/At0m/dependencies/imgui/imgui_tables.cpp
+CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_tables.cpp.o: CMakeFiles/atom.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/x/At0m/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_tables.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_tables.cpp.o -MF CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_tables.cpp.o.d -o CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_tables.cpp.o -c /mnt/x/At0m/dependencies/imgui/imgui_tables.cpp
+
+CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_tables.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_tables.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/x/At0m/dependencies/imgui/imgui_tables.cpp > CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_tables.cpp.i
+
+CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_tables.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_tables.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/x/At0m/dependencies/imgui/imgui_tables.cpp -o CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_tables.cpp.s
+
+CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/backends/imgui_impl_glfw.cpp.o: CMakeFiles/atom.dir/flags.make
+CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/backends/imgui_impl_glfw.cpp.o: /mnt/x/At0m/dependencies/imgui/backends/imgui_impl_glfw.cpp
+CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/backends/imgui_impl_glfw.cpp.o: CMakeFiles/atom.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/x/At0m/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/backends/imgui_impl_glfw.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/backends/imgui_impl_glfw.cpp.o -MF CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/backends/imgui_impl_glfw.cpp.o.d -o CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/backends/imgui_impl_glfw.cpp.o -c /mnt/x/At0m/dependencies/imgui/backends/imgui_impl_glfw.cpp
+
+CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/backends/imgui_impl_glfw.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/backends/imgui_impl_glfw.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/x/At0m/dependencies/imgui/backends/imgui_impl_glfw.cpp > CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/backends/imgui_impl_glfw.cpp.i
+
+CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/backends/imgui_impl_glfw.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/backends/imgui_impl_glfw.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/x/At0m/dependencies/imgui/backends/imgui_impl_glfw.cpp -o CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/backends/imgui_impl_glfw.cpp.s
+
+CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/backends/imgui_impl_opengl3.cpp.o: CMakeFiles/atom.dir/flags.make
+CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/backends/imgui_impl_opengl3.cpp.o: /mnt/x/At0m/dependencies/imgui/backends/imgui_impl_opengl3.cpp
+CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/backends/imgui_impl_opengl3.cpp.o: CMakeFiles/atom.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/x/At0m/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/backends/imgui_impl_opengl3.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/backends/imgui_impl_opengl3.cpp.o -MF CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/backends/imgui_impl_opengl3.cpp.o.d -o CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/backends/imgui_impl_opengl3.cpp.o -c /mnt/x/At0m/dependencies/imgui/backends/imgui_impl_opengl3.cpp
+
+CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/backends/imgui_impl_opengl3.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/backends/imgui_impl_opengl3.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/x/At0m/dependencies/imgui/backends/imgui_impl_opengl3.cpp > CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/backends/imgui_impl_opengl3.cpp.i
+
+CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/backends/imgui_impl_opengl3.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/backends/imgui_impl_opengl3.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/x/At0m/dependencies/imgui/backends/imgui_impl_opengl3.cpp -o CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/backends/imgui_impl_opengl3.cpp.s
+
 # Object files for target atom
 atom_OBJECTS = \
 "CMakeFiles/atom.dir/main.cpp.o" \
@@ -160,7 +258,14 @@ atom_OBJECTS = \
 "CMakeFiles/atom.dir/atom.cpp.o" \
 "CMakeFiles/atom.dir/input_handler.cpp.o" \
 "CMakeFiles/atom.dir/mnt/x/At0m/dependencies/glad/src/glad.c.o" \
-"CMakeFiles/atom.dir/shader/shader.cpp.o"
+"CMakeFiles/atom.dir/shader/shader.cpp.o" \
+"CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui.cpp.o" \
+"CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_demo.cpp.o" \
+"CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_draw.cpp.o" \
+"CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_widgets.cpp.o" \
+"CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_tables.cpp.o" \
+"CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/backends/imgui_impl_glfw.cpp.o" \
+"CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/backends/imgui_impl_opengl3.cpp.o"
 
 # External object files for target atom
 atom_EXTERNAL_OBJECTS =
@@ -171,13 +276,20 @@ atom: CMakeFiles/atom.dir/atom.cpp.o
 atom: CMakeFiles/atom.dir/input_handler.cpp.o
 atom: CMakeFiles/atom.dir/mnt/x/At0m/dependencies/glad/src/glad.c.o
 atom: CMakeFiles/atom.dir/shader/shader.cpp.o
+atom: CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui.cpp.o
+atom: CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_demo.cpp.o
+atom: CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_draw.cpp.o
+atom: CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_widgets.cpp.o
+atom: CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_tables.cpp.o
+atom: CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/backends/imgui_impl_glfw.cpp.o
+atom: CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/backends/imgui_impl_opengl3.cpp.o
 atom: CMakeFiles/atom.dir/build.make
 atom: /usr/local/lib/libglfw3.a
 atom: /usr/lib/x86_64-linux-gnu/libGL.so
 atom: /usr/lib/x86_64-linux-gnu/librt.a
 atom: /usr/lib/x86_64-linux-gnu/libm.so
 atom: CMakeFiles/atom.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/x/At0m/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable atom"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/x/At0m/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable atom"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/atom.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
