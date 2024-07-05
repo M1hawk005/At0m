@@ -1,0 +1,32 @@
+[
+{
+  "directory": "/mnt/x/At0m/build",
+  "command": "/usr/bin/c++ -g -o CMakeFiles/atom.dir/main.cpp.o -c /mnt/x/At0m/src/main.cpp",
+  "file": "/mnt/x/At0m/src/main.cpp"
+},
+{
+  "directory": "/mnt/x/At0m/build",
+  "command": "/usr/bin/c++ -g -o CMakeFiles/atom.dir/atom_launcher.cpp.o -c /mnt/x/At0m/src/atom_launcher.cpp",
+  "file": "/mnt/x/At0m/src/atom_launcher.cpp"
+},
+{
+  "directory": "/mnt/x/At0m/build",
+  "command": "/usr/bin/c++ -g -o CMakeFiles/atom.dir/atom.cpp.o -c /mnt/x/At0m/src/atom.cpp",
+  "file": "/mnt/x/At0m/src/atom.cpp"
+},
+{
+  "directory": "/mnt/x/At0m/build",
+  "command": "/usr/bin/c++ -g -o CMakeFiles/atom.dir/input_handler.cpp.o -c /mnt/x/At0m/src/input_handler.cpp",
+  "file": "/mnt/x/At0m/src/input_handler.cpp"
+},
+{
+  "directory": "/mnt/x/At0m/build",
+  "command": "/usr/bin/cc -g -o CMakeFiles/atom.dir/mnt/x/At0m/dependencies/glad/src/glad.c.o -c /mnt/x/At0m/dependencies/glad/src/glad.c",
+  "file": "/mnt/x/At0m/dependencies/glad/src/glad.c"
+},
+{
+  "directory": "/mnt/x/At0m/build",
+  "command": "/usr/bin/c++ -g -o CMakeFiles/atom.dir/shader/shader.cpp.o -c /mnt/x/At0m/src/shader/shader.cpp",
+  "file": "/mnt/x/At0m/src/shader/shader.cpp"
+}
+]

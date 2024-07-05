@@ -61,7 +61,7 @@ void AtomLauncher::init(){
     glfwGetFramebufferSize(m_window, &framebufferWidth, &framebufferHeight);
     glViewport(0, 0, framebufferWidth, framebufferHeight); 
     
-    glClearColor(1.0f, 1.0f, 1.0f, 0.0f);
+    glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
 
    
 
@@ -70,39 +70,33 @@ void AtomLauncher::init(){
 
 void AtomLauncher::run(){
 
-    std::vector<GLfloat> vertices= {
-        0.5f,  0.5f, 0.0f,  // Top right
-        0.5f, -0.5f, 0.0f,  // Bottom right
-        -0.5f, -0.5f, 0.0f, // Bottom left
-        -0.5f,  0.5f, 0.0f  // Top left 
-    };
-    
-    std::vector<GLuint> indices = {
-        0, 1, 3, // First triangle
-        1, 2, 3  // Second triangle
-    };
+    std::vector<Atom> atoms; 
 
-    
+    atoms.emplace_back(std::array<float, 3>{0.0f, 0.0f, 0.0f}, std::array<float, 3>{1.0f, 0.0f, 0.0f}); // Red atom at center
+    atoms.emplace_back(std::array<float, 3>{0.5f, 0.5f, 0.0f}, std::array<float, 3>{0.0f, 1.0f, 0.0f}); // Green atom at top-right
 
-    GLuint VAO;
+    GLuint VAO, VBO;
     glGenVertexArrays(1,&VAO);
-    glBindVertexArray(VAO);
-    
-    GLuint EBO;
-    glGenBuffers(1, &EBO);
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
-    glBufferData(GL_ELEMENT_ARRAY_BUFFER, indices.size()*sizeof(GLint), indices.data(), GL_STATIC_DRAW);
-
-
-
-    GLuint VBO;
     glGenBuffers(1,&VBO);
 
-    glBindBuffer(GL_ARRAY_BUFFER, VBO);
-    glBufferData(GL_ARRAY_BUFFER, vertices.size()*sizeof(float), vertices.data(), GL_STATIC_DRAW);
 
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3*sizeof(GLfloat), (void*)0);
+    glBindVertexArray(VAO);
+    glBindBuffer(GL_ARRAY_BUFFER, VBO);
+
+    std::vector<float> buffer;
+    for (const auto& atom : atoms) {
+        const auto& pos = atom.getPosition();
+        const auto& col = atom.getColor();
+        buffer.insert(buffer.end(), pos.begin(), pos.end());
+        buffer.insert(buffer.end(), col.begin(), col.end());
+    }
+
+    glBufferData(GL_ARRAY_BUFFER, buffer.size() * sizeof(float), buffer.data(), GL_STATIC_DRAW);
+
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
     glEnableVertexAttribArray(0);
+    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float)));
+    glEnableVertexAttribArray(1);
 
     Shader shader("../src/shader/vertex_shader.glsl", "../src/shader/fragment_shader.glsl");
     GLuint shaderProgram= shader.getProgram();
@@ -113,14 +107,14 @@ void AtomLauncher::run(){
         glClear(GL_COLOR_BUFFER_BIT);
 
         glUseProgram(shaderProgram);
-        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+        glPointSize(10.0f); // Make the points larger so they're easier to see
+        glDrawArrays(GL_POINTS, 0, atoms.size());
         glfwSwapBuffers(m_window);
         glfwPollEvents();
     } 
  
     double time = glfwGetTime();
     glDeleteBuffers(1, &VBO);
-    glDeleteBuffers(1, &EBO);
     glDeleteVertexArrays(1, &VAO);
     glDeleteProgram(shaderProgram);
     glfwDestroyWindow(m_window);
