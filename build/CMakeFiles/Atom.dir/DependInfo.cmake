@@ -21,6 +21,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/mnt/x/At0m/dependencies/imgui/imgui_tables.cpp" "CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_tables.cpp.o" "gcc" "CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_tables.cpp.o.d"
   "/mnt/x/At0m/dependencies/imgui/imgui_widgets.cpp" "CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_widgets.cpp.o" "gcc" "CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_widgets.cpp.o.d"
   "/mnt/x/At0m/src/shader/shader.cpp" "CMakeFiles/atom.dir/shader/shader.cpp.o" "gcc" "CMakeFiles/atom.dir/shader/shader.cpp.o.d"
+  "/mnt/x/At0m/src/util/global.cpp" "CMakeFiles/atom.dir/util/global.cpp.o" "gcc" "CMakeFiles/atom.dir/util/global.cpp.o.d"
   )
 
 # Targets to which this target links.

@@ -5,7 +5,8 @@
 #define GLFW_INCLUDE_NONE
 #include<glad/glad.h>
 #include<GLFW/glfw3.h> 
-
+#include<vector>
+#include<mutex>
 
 class AtomLauncher{
     public:
@@ -16,6 +17,7 @@ class AtomLauncher{
     private:
         GLFWwindow* m_window;
         void init();
+        void updateVBO(std::vector<Atom>& atoms, GLuint VBO);
 
 };
 

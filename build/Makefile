@@ -441,6 +441,30 @@ shader/shader.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/atom.dir/build.make CMakeFiles/atom.dir/shader/shader.cpp.s
 .PHONY : shader/shader.cpp.s
 
+util/global.o: util/global.cpp.o
+.PHONY : util/global.o
+
+# target to build an object file
+util/global.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atom.dir/build.make CMakeFiles/atom.dir/util/global.cpp.o
+.PHONY : util/global.cpp.o
+
+util/global.i: util/global.cpp.i
+.PHONY : util/global.i
+
+# target to preprocess a source file
+util/global.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atom.dir/build.make CMakeFiles/atom.dir/util/global.cpp.i
+.PHONY : util/global.cpp.i
+
+util/global.s: util/global.cpp.s
+.PHONY : util/global.s
+
+# target to generate assembly for a file
+util/global.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atom.dir/build.make CMakeFiles/atom.dir/util/global.cpp.s
+.PHONY : util/global.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -489,6 +513,9 @@ help:
 	@echo "... shader/shader.o"
 	@echo "... shader/shader.i"
 	@echo "... shader/shader.s"
+	@echo "... util/global.o"
+	@echo "... util/global.i"
+	@echo "... util/global.s"
 .PHONY : help
 
 

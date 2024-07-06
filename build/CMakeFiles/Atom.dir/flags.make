@@ -13,5 +13,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/mnt/x/At0m/src/../dependencies/imgui -I/mnt/x/At0m/src/../dependencies/imgui/backends
 
-CXX_FLAGS = 
+CXX_FLAGS = -std=gnu++20
 

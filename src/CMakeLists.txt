@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0)
-
+set (CMAKE_CXX_STANDARD 20)
 project(atom)
 
 # Find GLFW package
@@ -28,6 +28,7 @@ set(SOURCES
     input_handler.cpp
     ../dependencies/glad/src/glad.c
     shader/shader.cpp
+    util/global.cpp
 )
 
 # Create executable

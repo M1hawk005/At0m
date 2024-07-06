@@ -25,6 +25,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/atom.dir/mnt/x/At0m/dependencies/imgui/imgui_widgets.cpp.o.d"
   "CMakeFiles/atom.dir/shader/shader.cpp.o"
   "CMakeFiles/atom.dir/shader/shader.cpp.o.d"
+  "CMakeFiles/atom.dir/util/global.cpp.o"
+  "CMakeFiles/atom.dir/util/global.cpp.o.d"
   "atom"
   "atom.pdb"
 )

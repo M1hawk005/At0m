@@ -1,11 +1,11 @@
 #include "atom_launcher.h"
+#include "util/global.h"
 #include "input_handler.h"
 #include "shader/shader.h"
 #include<cmath>
 #include<vector>
 #include<iostream>
 #include<stdlib.h>
-
 
 #include<imgui.h>
 #include<backends/imgui_impl_glfw.h>
@@ -37,11 +37,9 @@ void AtomLauncher::init(){
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE); // Use core profile
     glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GLFW_TRUE); // Compatibility with macOS
     
+    //Create Window
     m_window = glfwCreateWindow(1920,1200,"At0m",NULL,NULL);
     
-    
-    
-    //Create Window
     if(!m_window){
         std::cerr << "Failed to create window" << std::endl;
         glfwTerminate();
@@ -49,10 +47,20 @@ void AtomLauncher::init(){
     }
 
     glfwMakeContextCurrent(m_window);
+
+    if(!gladLoadGL()){
+        std::cerr << "Failed to initialize glad" << std::endl;
+        glfwDestroyWindow(m_window);
+        glfwTerminate();
+        exit(EXIT_FAILURE);
+    }
+
     // Setup Dear ImGui context 
     IMGUI_CHECKVERSION();
     ImGui::CreateContext();
     ImGuiIO& io = ImGui::GetIO(); (void)io;
+    
+    io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;     // Enable Keyboard Controls
 
     // Setup Dear ImGui style
     ImGui::StyleColorsDark();
@@ -62,19 +70,12 @@ void AtomLauncher::init(){
     ImGui_ImplOpenGL3_Init("#version 410");
 
 
-    if(!gladLoadGL()){
-        std::cerr << "Failed to initialize glad" << std::endl;
-        glfwDestroyWindow(m_window);
-        glfwTerminate();
-        exit(EXIT_FAILURE);
-    }
-    
-    
     std::cout << "OpenGL Version: " << glGetString(GL_VERSION) << std::endl;
     std::cout << "GLSL Version: " << glGetString(GL_SHADING_LANGUAGE_VERSION) << std::endl;
 
     glfwSetKeyCallback(m_window, InputHandler::keyCallback);
-
+    glfwSetMouseButtonCallback(m_window, InputHandler::mouse_button_callback);
+    
     glfwSwapInterval(1);
 
     // Set viewport size
@@ -92,27 +93,21 @@ void AtomLauncher::init(){
 void AtomLauncher::run(){
 
     std::vector<Atom> atoms; 
+    
+    std::lock_guard<std::mutex> lock(clickPositionMutex);
+    
+    float position[3] = {clickPosition.x, clickPosition.y, 0.0f};
+    
+    float color[3] = {1.0f, 1.0f, 1.0f};
+    
+    GLuint VAO, VBO;  
 
-    atoms.emplace_back(std::array<float, 3>{0.0f, 0.0f, 0.0f}, std::array<float, 3>{1.0f, 0.0f, 0.0f}); // Red atom at center
-    atoms.emplace_back(std::array<float, 3>{0.9f, 0.9f, 0.0f}, std::array<float, 3>{0.0f, 1.0f, 0.0f}); // Green atom at top-right
-
-    GLuint VAO, VBO;
-    glGenVertexArrays(1,&VAO);
     glGenBuffers(1,&VBO);
+    glGenVertexArrays(1,&VAO);
 
 
     glBindVertexArray(VAO);
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
-
-    std::vector<float> buffer;
-    for (const auto& atom : atoms) {
-        const auto& pos = atom.getPosition();
-        const auto& col = atom.getColor();
-        buffer.insert(buffer.end(), pos.begin(), pos.end());
-        buffer.insert(buffer.end(), col.begin(), col.end());
-    }
-
-    glBufferData(GL_ARRAY_BUFFER, buffer.size() * sizeof(float), buffer.data(), GL_STATIC_DRAW);
 
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
     glEnableVertexAttribArray(0);
@@ -126,18 +121,31 @@ void AtomLauncher::run(){
   // Main rendering loop
     while (!glfwWindowShouldClose(m_window)) {
        
+        glfwPollEvents();
         // Start the Dear ImGui frame
         ImGui_ImplOpenGL3_NewFrame();
         ImGui_ImplGlfw_NewFrame();
         ImGui::NewFrame();
 
         // Your ImGui windows and controls go here
-        ImGui::Begin("Hello, world!");
-        ImGui::Text("This is some useful text.");
-        ImGui::End();
+        ImGui::Begin("Atom Creator");
+        
+        
+        ImGui::Text("Color:");
+        ImGui::InputFloat3("##Color",color);
 
+        if(ImGui::Button("Add Atom")){
+            atoms.emplace_back(std::array<float, 3>{position[0], position[1], position[2]},
+                                std::array<float, 3>{color[0], color[1], color[2]}); 
+            updateVBO(atoms,VBO);
+        }
+
+
+
+        ImGui::End();
         // Rendering
         ImGui::Render();
+        
         // int display_w, display_h;
         // glfwGetFramebufferSize(m_window, &display_w, &display_h);
         // glViewport(0, 0, display_w, display_h);
@@ -148,14 +156,17 @@ void AtomLauncher::run(){
         glPointSize(10.0f); // Make the points larger so they're easier to see
         glDrawArrays(GL_POINTS, 0, atoms.size());
         
-        
+       
         ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 
 
         glfwSwapBuffers(m_window);
-        glfwPollEvents();
     } 
- 
+
+    ImGui_ImplOpenGL3_Shutdown();
+    ImGui_ImplGlfw_Shutdown();
+    ImGui::DestroyContext();    
+
     double time = glfwGetTime();
     glDeleteBuffers(1, &VBO);
     glDeleteVertexArrays(1, &VAO);
@@ -163,4 +174,17 @@ void AtomLauncher::run(){
     glfwDestroyWindow(m_window);
 
     glfwTerminate();
+}
+
+void AtomLauncher::updateVBO(std::vector<Atom>& atoms, GLuint VBO){
+    std::vector<float> buffer;
+    for (const auto& atom : atoms) {
+        const auto& pos = atom.getPosition();
+        const auto& col = atom.getColor();
+        buffer.insert(buffer.end(), pos.begin(), pos.end());
+        buffer.insert(buffer.end(), col.begin(), col.end());
+    }
+    glBindBuffer(GL_ARRAY_BUFFER, VBO);
+    glBufferData(GL_ARRAY_BUFFER, buffer.size() * sizeof(float), buffer.data(), GL_DYNAMIC_DRAW);
+    
 }
