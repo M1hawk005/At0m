@@ -1,4 +1,4 @@
 #include "global.h"
 
-ClickPosition clickPosition;
-std::mutex clickPositionMutex;
+MousePosition mousePosition = {0.0f, 0.0f, false};;
+std::mutex mousePositionMutex;

@@ -16,7 +16,7 @@ void errorCallback(int error, char const* description){
     }
 
 
-AtomLauncher::AtomLauncher(){
+AtomLauncher::AtomLauncher(): m_inputMode(false){
     init();
 }
 
@@ -54,7 +54,12 @@ void AtomLauncher::init(){
         glfwTerminate();
         exit(EXIT_FAILURE);
     }
-
+    
+    glfwSetKeyCallback(m_window, InputHandler::keyCallback);
+    glfwSetMouseButtonCallback(m_window, InputHandler::mouse_button_callback);
+    glfwSetCursorPosCallback(m_window, InputHandler::cursorPositionCallback);
+ 
+    
     // Setup Dear ImGui context 
     IMGUI_CHECKVERSION();
     ImGui::CreateContext();
@@ -73,9 +78,7 @@ void AtomLauncher::init(){
     std::cout << "OpenGL Version: " << glGetString(GL_VERSION) << std::endl;
     std::cout << "GLSL Version: " << glGetString(GL_SHADING_LANGUAGE_VERSION) << std::endl;
 
-    glfwSetKeyCallback(m_window, InputHandler::keyCallback);
-    glfwSetMouseButtonCallback(m_window, InputHandler::mouse_button_callback);
-    
+   
     glfwSwapInterval(1);
 
     // Set viewport size
@@ -94,9 +97,8 @@ void AtomLauncher::run(){
 
     std::vector<Atom> atoms; 
     
-    std::lock_guard<std::mutex> lock(clickPositionMutex);
     
-    float position[3] = {clickPosition.x, clickPosition.y, 0.0f};
+    float position[3] = {0.0f, 0.0f, 0.0f};
     
     float color[3] = {1.0f, 1.0f, 1.0f};
     
@@ -121,10 +123,11 @@ void AtomLauncher::run(){
   // Main rendering loop
     while (!glfwWindowShouldClose(m_window)) {
        
-        glfwPollEvents();
         // Start the Dear ImGui frame
         ImGui_ImplOpenGL3_NewFrame();
         ImGui_ImplGlfw_NewFrame();
+
+        glfwPollEvents();
         ImGui::NewFrame();
 
         // Your ImGui windows and controls go here
@@ -134,18 +137,37 @@ void AtomLauncher::run(){
         ImGui::Text("Color:");
         ImGui::InputFloat3("##Color",color);
 
-        if(ImGui::Button("Add Atom")){
-            atoms.emplace_back(std::array<float, 3>{position[0], position[1], position[2]},
-                                std::array<float, 3>{color[0], color[1], color[2]}); 
-            updateVBO(atoms,VBO);
+        if(ImGui::Button(m_inputMode ? "Insert Atom":"Add Atom")){
+            m_inputMode = !m_inputMode; 
+       
+        }
+        ImGui::End();
+        // Rendering
+        ImGui::Render();
+        // && !io.WantCaptureMouse)
+
+        ImGuiIO& io = ImGui::GetIO();
+        if(m_inputMode) {
+            
+            std::lock_guard<std::mutex> lock(mousePositionMutex);
+            if(mousePosition.updated){ 
+                std::cout<< mousePosition.x << std::endl;
+                position[0] = mousePosition.x;
+                position[1] = mousePosition.y;
+                atoms.emplace_back(std::array<float, 3>{position[0], position[1], position[2]},
+                                    std::array<float, 3>{color[0], color[1], color[2]}); 
+                updateVBO(atoms,VBO);
+            
+                mousePosition.updated = false; 
+            
+                // m_inputMode = false;
+           }
         }
 
 
 
-        ImGui::End();
-        // Rendering
-        ImGui::Render();
         
+       
         // int display_w, display_h;
         // glfwGetFramebufferSize(m_window, &display_w, &display_h);
         // glViewport(0, 0, display_w, display_h);

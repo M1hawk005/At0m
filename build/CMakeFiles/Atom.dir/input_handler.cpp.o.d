@@ -191,4 +191,10 @@ CMakeFiles/atom.dir/input_handler.cpp.o: \
  /usr/include/c++/11/ratio /usr/include/c++/11/ctime \
  /usr/include/c++/11/bits/parse_numbers.h \
  /usr/include/c++/11/bits/std_mutex.h \
- /usr/include/c++/11/bits/unique_lock.h /mnt/x/At0m/src/util/global.h
+ /usr/include/c++/11/bits/unique_lock.h /mnt/x/At0m/src/util/global.h \
+ /mnt/x/At0m/src/../dependencies/imgui/imgui.h \
+ /mnt/x/At0m/src/../dependencies/imgui/imconfig.h \
+ /usr/lib/gcc/x86_64-linux-gnu/11/include/float.h /usr/include/string.h \
+ /usr/include/strings.h /usr/include/assert.h \
+ /mnt/x/At0m/src/../dependencies/imgui/backends/imgui_impl_glfw.h \
+ /mnt/x/At0m/src/../dependencies/imgui/backends/imgui_impl_opengl3.h

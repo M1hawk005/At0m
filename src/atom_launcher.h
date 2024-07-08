@@ -18,7 +18,7 @@ class AtomLauncher{
         GLFWwindow* m_window;
         void init();
         void updateVBO(std::vector<Atom>& atoms, GLuint VBO);
-
+        bool m_inputMode;
 };
 
 #endif //ATOM_LAUNCHER_H

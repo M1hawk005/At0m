@@ -5,12 +5,13 @@
 #include <vector>
 #include <array>
 
-struct ClickPosition {
+struct MousePosition {
     float x;
     float y;
+    bool updated;
 };
 
-extern ClickPosition clickPosition;
-extern std::mutex clickPositionMutex;
+extern MousePosition mousePosition;
+extern std::mutex mousePositionMutex;
 
 #endif // GLOBAL_H
