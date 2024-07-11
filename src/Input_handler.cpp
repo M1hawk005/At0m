@@ -18,25 +18,30 @@ void InputHandler::mouse_button_callback(GLFWwindow* window, int button, int act
         return;
     }
 
+    std::lock_guard<std::mutex> lock(mousePositionMutex);
     if(button == GLFW_MOUSE_BUTTON_LEFT){
         if (action == GLFW_PRESS){
-            double xpos, ypos;
-            glfwGetCursorPos(window, &xpos, &ypos);
-
-            int width, height;
-            glfwGetWindowSize(window, &width, &height);
-            // Convert to OpenGL coordinates
-            float x = (float)xpos / width * 2.0f - 1.0f;
-            float y = 1.0f - (float)ypos / height * 2.0f;
-            std::lock_guard<std::mutex> lock(mousePositionMutex);
-            mousePosition = {x,y,true};
+            mousePosition.updated= true;
+        }
+        else if(action == GLFW_RELEASE){
+            mousePosition.updated= false;
         }
     }
 
 }
 
 void InputHandler::cursorPositionCallback(GLFWwindow* window, double xpos, double ypos) {
-    std::lock_guard<std::mutex> lock(mousePositionMutex);
-    mousePosition.x= xpos;
-    mousePosition.y= ypos;
+    // std::lock_guard<std::mutex> lock(mousePositionMutex);
+    if(mousePosition.updated){
+        
+        int width, height;
+        glfwGetWindowSize(window, &width, &height);
+        
+        // Convert to OpenGL coordinates
+        float x = (float)xpos / width * 2.0f - 1.0f;
+        float y = 1.0f - (float)ypos / height * 2.0f;
+        mousePosition.x= x;
+        mousePosition.y= y;
+    }
+    
 }

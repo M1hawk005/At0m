@@ -82,13 +82,7 @@ void AtomLauncher::init(){
     glfwSwapInterval(1);
 
     // Set viewport size
-    int framebufferWidth, framebufferHeight;
-    glfwGetFramebufferSize(m_window, &framebufferWidth, &framebufferHeight);
-    glViewport(0, 0, framebufferWidth, framebufferHeight); 
-    
-    glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
-
-   
+       
 
 }
 
@@ -122,7 +116,14 @@ void AtomLauncher::run(){
 
   // Main rendering loop
     while (!glfwWindowShouldClose(m_window)) {
-       
+        
+        int framebufferWidth, framebufferHeight;
+        glfwGetFramebufferSize(m_window, &framebufferWidth, &framebufferHeight);
+        glViewport(0, 0, framebufferWidth, framebufferHeight); 
+    
+        glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
+
+  
         // Start the Dear ImGui frame
         ImGui_ImplOpenGL3_NewFrame();
         ImGui_ImplGlfw_NewFrame();
@@ -143,41 +144,36 @@ void AtomLauncher::run(){
         }
         ImGui::End();
         // Rendering
-        ImGui::Render();
-        // && !io.WantCaptureMouse)
+        
 
         ImGuiIO& io = ImGui::GetIO();
-        if(m_inputMode) {
-            
-            std::lock_guard<std::mutex> lock(mousePositionMutex);
-            if(mousePosition.updated){ 
-                std::cout<< mousePosition.x << std::endl;
+        std::lock_guard<std::mutex> lock(mousePositionMutex);
+        if(m_inputMode && mousePosition.updated) {
+                // std::cout<< mousePosition.x << std::endl;
                 position[0] = mousePosition.x;
                 position[1] = mousePosition.y;
+                
                 atoms.emplace_back(std::array<float, 3>{position[0], position[1], position[2]},
                                     std::array<float, 3>{color[0], color[1], color[2]}); 
                 updateVBO(atoms,VBO);
             
-                mousePosition.updated = false; 
+                std::cout << mousePosition.x <<":"<< mousePosition.y << std::endl; 
             
-                // m_inputMode = false;
-           }
         }
+        
 
 
 
         
        
-        // int display_w, display_h;
-        // glfwGetFramebufferSize(m_window, &display_w, &display_h);
-        // glViewport(0, 0, display_w, display_h);
+        ImGui::Render();
+        
         glClear(GL_COLOR_BUFFER_BIT);
 
         // Your OpenGL rendering code goes here
         glUseProgram(shaderProgram);
-        glPointSize(10.0f); // Make the points larger so they're easier to see
+        glPointSize(5.0f); // Make the points larger so they're easier to see
         glDrawArrays(GL_POINTS, 0, atoms.size());
-        
        
         ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 
