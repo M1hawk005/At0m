@@ -1,38 +1,40 @@
-cmake_minimum_required(VERSION 3.0)
-set (CMAKE_CXX_STANDARD 20)
-project(atom)
+cmake_minimum_required(VERSION 3.10)
 
-# Find GLFW package
-find_package(glfw3 REQUIRED)
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+project("At0m" VERSION 1.0.0)
 
-# Find OpenGL (GLAD is included with GLFW)
 find_package(OpenGL REQUIRED)
 
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../dependencies/imgui)
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../dependencies/imgui/backends)
-set(IMGUI_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../dependencies/imgui)
-set(IMGUI_SOURCES
-    ${IMGUI_DIR}/imgui.cpp
-    ${IMGUI_DIR}/imgui_demo.cpp
-    ${IMGUI_DIR}/imgui_draw.cpp
-    ${IMGUI_DIR}/imgui_widgets.cpp
-    ${IMGUI_DIR}/imgui_tables.cpp
-    ${IMGUI_DIR}/backends/imgui_impl_glfw.cpp
-    ${IMGUI_DIR}/backends/imgui_impl_opengl3.cpp
-) 
-# List of source files
-set(SOURCES
-    main.cpp
-    atom_launcher.cpp
-    atom.cpp
-    input_handler.cpp
-    ../dependencies/glad/src/glad.c
-    shader/shader.cpp
-    util/global.cpp
-)
+include_directories("${CMAKE_SOURCE_DIR}/../dependencies")
+include_directories("${CMAKE_SOURCE_DIR}/../dependencies/glad/include")
+include_directories("${CMAKE_SOURCE_DIR}/../dependencies/glfw/include")
+include_directories("${CMAKE_SOURCE_DIR}/../dependencies/imgui")
 
-# Create executable
-add_executable(atom ${SOURCES} ${IMGUI_SOURCES})
 
-# Link libraries
-target_link_libraries(atom PRIVATE glfw OpenGL::GL)
+file(GLOB_RECURSE SRCS_HEADERS_IMGUI "${CMAKE_SOURCE_DIR}/../dependencies/imgui/*.cpp" "${CMAKE_SOURCE_DIR}/../dependencies/imgui/*.h")
+file(GLOB_RECURSE SRCS_HEADERS_GLAD "${CMAKE_SOURCE_DIR}/../dependencies/glad/*.c" "${CMAKE_SOURCE_DIR}/../dependencies/glad/*.h")
+
+file(GLOB_RECURSE SRCS "${CMAKE_SOURCE_DIR}/*.cpp")
+file(GLOB_RECURSE HEADERS "${CMAKE_SOURCE_DIR}/*.h")
+
+add_executable(${PROJECT_NAME} ${SRCS} ${HEADERS} ${SRCS_HEADERS_IMGUI} ${SRCS_HEADERS_GLAD})
+
+target_link_libraries(${PROJECT_NAME} OpenGL::GL)
+
+if (WIN32)
+    target_link_libraries(${PROJECT_NAME} winmm.lib)
+    if (MSVC)
+        target_link_libraries(${PROJECT_NAME} "${CMAKE_SOURCE_DIR}/../dependencies/glfw/lib-vc2022/glfw3.lib")
+    elseif (MINGW)
+        target_link_libraries(${PROJECT_NAME} "${CMAKE_SOURCE_DIR}/../dependencies/glfw/lib-mingw-w64/libglfw3.a")
+    endif ()
+elseif (UNIX)
+    find_package(glfw3 REQUIRED)
+    target_link_libraries(${PROJECT_NAME} glfw ${CMAKE_DL_LIBS})
+else ()
+    message(FATAL_ERROR "OS not configured in CMakeLists.txt")
+endif ()
+
+set_property(TARGET ${PROJECT_NAME} PROPERTY VS_DEBUGGER_WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}/../build")

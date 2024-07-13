@@ -1,0 +1,16 @@
+# ninja log v5
+32	406	7425581001523930	CMakeFiles/At0m.dir/X_/At0m/dependencies/imgui/imgui_tables.cpp.obj	6217f886c5ed2d39
+19	408	7425581001523930	CMakeFiles/At0m.dir/X_/At0m/dependencies/imgui/backends/imgui_impl_opengl3.cpp.obj	a65ca15d40e55300
+25	411	7425581001523930	CMakeFiles/At0m.dir/X_/At0m/dependencies/imgui/imgui_demo.cpp.obj	91cdc6d216543cec
+39	476	7425581002272589	CMakeFiles/At0m.dir/X_/At0m/dependencies/glad/src/glad.c.obj	c26a80a6a33d7b82
+28	482	7425581002272589	CMakeFiles/At0m.dir/X_/At0m/dependencies/imgui/imgui_draw.cpp.obj	9dc3f72fa0759e0
+36	566	7425581003231390	CMakeFiles/At0m.dir/X_/At0m/dependencies/imgui/imgui_widgets.cpp.obj	a33e4fc58546c52d
+17	593	7425581003514496	CMakeFiles/At0m.dir/X_/At0m/dependencies/imgui/backends/imgui_impl_glfw.cpp.obj	ffa4bdc8f7af7dd7
+12	696	7425581004481370	CMakeFiles/At0m.dir/util/global.cpp.obj	31fcf46b43ac750
+4	794	7425581005523373	CMakeFiles/At0m.dir/atom.cpp.obj	bda4298dfeb1beb4
+22	796	7425581005543516	CMakeFiles/At0m.dir/X_/At0m/dependencies/imgui/imgui.cpp.obj	e4c73d4f7613325e
+10	822	7425581005768240	CMakeFiles/At0m.dir/shader/shader.cpp.obj	77830c3709f1f607
+8	830	7425581005768240	CMakeFiles/At0m.dir/main.cpp.obj	3d89354b439459fa
+1	898	7425581006549190	CMakeFiles/At0m.dir/Input_handler.cpp.obj	b479762ada79c99a
+6	906	7425581006651022	CMakeFiles/At0m.dir/atom_launcher.cpp.obj	eefa18779a1ca623
+906	1170	7425581009004076	At0m.exe	d227e9b9b473db71

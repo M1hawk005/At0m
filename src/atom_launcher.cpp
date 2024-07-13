@@ -110,7 +110,7 @@ void AtomLauncher::run(){
     glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float)));
     glEnableVertexAttribArray(1);
 
-    Shader shader("../src/shader/vertex_shader.glsl", "../src/shader/fragment_shader.glsl");
+    Shader shader("../../src/shader/vertex_shader.glsl", "../../src/shader/fragment_shader.glsl");
     GLuint shaderProgram= shader.getProgram();
     glBindBuffer(GL_ARRAY_BUFFER, 0);
 
@@ -152,6 +152,7 @@ void AtomLauncher::run(){
                 // std::cout<< mousePosition.x << std::endl;
                 position[0] = mousePosition.x;
                 position[1] = mousePosition.y;
+                std::cout << color[0] << ":" << color[1] << std::endl;
                 
                 atoms.emplace_back(std::array<float, 3>{position[0], position[1], position[2]},
                                     std::array<float, 3>{color[0], color[1], color[2]}); 

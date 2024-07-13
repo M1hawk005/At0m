@@ -1,0 +1,12 @@
+{
+  "OutputFoldersPerTargetSystem": {
+    "Local Machine": [
+      "build\\x64-Debug",
+      "src\\out\\install\\x64-Debug"
+    ],
+    "WSL: Ubuntu-22.04": [
+      "src\\out\\build\\x64-Debug",
+      "src\\out\\install\\x64-Debug"
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "DevContainersInfoBarHidden": true,
+  "ActiveTargetSystem": "Local Machine",
+  "ExpandedNodes": [
+    "",
+    "\\dependencies\\glad",
+    "\\dependencies\\glad\\include",
+    "\\dependencies\\glad\\include\\glad",
+    "\\dependencies\\imgui",
+    "\\dependencies\\imgui\\backends",
+    "\\src",
+    "\\src\\shader"
+  ],
+  "SelectedNode": "\\src\\shader\\shader.cpp",
+  "PreviewInSolutionExplorer": false
+}
