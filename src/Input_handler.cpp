@@ -37,7 +37,7 @@ void InputHandler::cursorPositionCallback(GLFWwindow* window, double xpos, doubl
         int width, height;
         glfwGetWindowSize(window, &width, &height);
         
-        // Convert to OpenGL coordinates
+        // Convert to OpenGL coordinates 
         float x = (float)xpos / width * 2.0f - 1.0f;
         float y = 1.0f - (float)ypos / height * 2.0f;
         mousePosition.x= x;

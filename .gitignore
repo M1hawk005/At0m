@@ -1,0 +1,46 @@
+# Build artifacts
+build/
+*.obj
+*.exe
+*.pdb
+*.ilk
+*.log
+*.lib
+*.dll
+*.exp
+*.cache
+
+# Visual Studio files
+.vs/
+*.suo
+*.user
+*.vcxproj.filters
+*.vcxproj.user
+*.ipch
+
+# VS Code files
+.vscode/
+
+# Dependency directories (if you're not tracking them in Git)
+dependencies/
+
+# ImGui build files
+imgui/build/
+
+# CMake related files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+
+# Personal settings
+*.ini
+
+# Temporary files
+*~/
+\#*\#
+.*.swp
+.DS_Store
+
+#Other
+/out/
+/temp/

@@ -1,6 +1,6 @@
 #ifndef ATOM_H
 #define ATOM_H
-#include<iostream>
+#include <iostream>
 #include <array>
 #include <cmath>
 
@@ -12,7 +12,7 @@ class Atom{
 
         const std::array<float, 3>& getPosition() const; 
         const std::array<float, 3>& getColor() const; 
-
+        const int& getMult() const;
 
     private:
         int m_protons;

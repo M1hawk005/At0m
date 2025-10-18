@@ -152,7 +152,6 @@ void AtomLauncher::run(){
                 // std::cout<< mousePosition.x << std::endl;
                 position[0] = mousePosition.x;
                 position[1] = mousePosition.y;
-                std::cout << color[0] << ":" << color[1] << std::endl;
                 
                 atoms.emplace_back(std::array<float, 3>{position[0], position[1], position[2]},
                                     std::array<float, 3>{color[0], color[1], color[2]}); 
