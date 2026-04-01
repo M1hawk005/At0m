@@ -5,18 +5,18 @@ const float NEUTRON_MASS = 1.674929e-27;  // in kilograms
 const float ELECTRON_MASS = 9.10938356e-31;  // in kilograms
 const float G = 6.67430e-11;  // gravitational constant
 
- Atom::Atom(int protons, int neutrons, int electrons, const std::array<float, 3>& position, const std::array<float, 3>& velocity)
-     : m_protons(protons), m_neutrons(neutrons), m_electrons(electrons), m_position(position), m_velocity(velocity), 
-       m_mass(protons * PROTON_MASS + neutrons * NEUTRON_MASS + electrons * ELECTRON_MASS){
-    
- };
+//Atom::Atom(int protons, int neutrons, int electrons, const std::array<float, 3>& position, const std::array<float, 3>& velocity)
+//     : m_protons(protons), m_neutrons(neutrons), m_electrons(electrons), m_position(position), m_velocity(velocity), 
+//       m_mass(protons * PROTON_MASS + neutrons * NEUTRON_MASS + electrons * ELECTRON_MASS){
+//    
+// };
 
-//Atom::Atom(const std::array<float,3>& position, const std::array<float,3>& color):m_position(position), m_color(color){
-    
-//}
-  
+Atom::Atom(const std::array<float,3>& position, const std::array<float,3>& color)
+    : m_position(position), m_color(color), m_protons(0), m_neutrons(0), m_electrons(0), m_mass(0.0f) {
+    m_velocity = {0.0f, 0.0f, 0.0f};
+}
 
-const int& Atom::getMult const{ return protons; }
+const int& Atom::getMult() const { return m_protons; }
 
 const std::array<float, 3>& Atom::getPosition() const { return m_position; }
 

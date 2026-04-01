@@ -1,5 +1,4 @@
 #include "atom_launcher.h"
-#include "util/global.h"
 #include "input_handler.h"
 #include "shader/shader.h"
 #include<cmath>
@@ -16,7 +15,7 @@ void errorCallback(int error, char const* description){
     }
 
 
-AtomLauncher::AtomLauncher(): m_inputMode(false){
+AtomLauncher::AtomLauncher(): m_inputMode(false), m_addAtomQueued(false), m_mouseX(0.0f), m_mouseY(0.0f){
     init();
 }
 
@@ -55,6 +54,8 @@ void AtomLauncher::init(){
         exit(EXIT_FAILURE);
     }
     
+    glfwSetWindowUserPointer(m_window, this);
+
     glfwSetKeyCallback(m_window, InputHandler::keyCallback);
     glfwSetMouseButtonCallback(m_window, InputHandler::mouse_button_callback);
     glfwSetCursorPosCallback(m_window, InputHandler::cursorPositionCallback);
@@ -135,8 +136,7 @@ void AtomLauncher::run(){
         ImGui::Begin("Atom Creator");
         
         
-        ImGui::Text("Color:");
-        ImGui::InputFloat3("##Color",color);
+        ImGui::ColorEdit3("Color",color);
 
         if(ImGui::Button(m_inputMode ? "Insert Atom":"Add Atom")){
             m_inputMode = !m_inputMode; 
@@ -147,17 +147,17 @@ void AtomLauncher::run(){
         
 
         ImGuiIO& io = ImGui::GetIO();
-        std::lock_guard<std::mutex> lock(mousePositionMutex);
-        if(m_inputMode && mousePosition.updated) {
-                // std::cout<< mousePosition.x << std::endl;
-                position[0] = mousePosition.x;
-                position[1] = mousePosition.y;
+        
+        if(m_inputMode && m_addAtomQueued) {
+            m_addAtomQueued = false;
+            position[0] = m_mouseX;
+            position[1] = m_mouseY;
                 
-                atoms.emplace_back(std::array<float, 3>{position[0], position[1], position[2]},
+            atoms.emplace_back(std::array<float, 3>{position[0], position[1], position[2]},
                                     std::array<float, 3>{color[0], color[1], color[2]}); 
-                updateVBO(atoms,VBO);
+            updateVBO(atoms,VBO);
             
-                std::cout << mousePosition.x <<":"<< mousePosition.y << std::endl; 
+            std::cout << m_mouseX <<":"<< m_mouseY << std::endl; 
             
         }
         
@@ -172,6 +172,7 @@ void AtomLauncher::run(){
 
         // Your OpenGL rendering code goes here
         glUseProgram(shaderProgram);
+        glBindVertexArray(VAO);
         glPointSize(5.0f); // Make the points larger so they're easier to see
         glDrawArrays(GL_POINTS, 0, atoms.size());
        
@@ -205,4 +206,29 @@ void AtomLauncher::updateVBO(std::vector<Atom>& atoms, GLuint VBO){
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
     glBufferData(GL_ARRAY_BUFFER, buffer.size() * sizeof(float), buffer.data(), GL_DYNAMIC_DRAW);
     
+}
+
+void AtomLauncher::onKeyEvent(int key, int scancode, int action, int mods){
+    if(key==GLFW_KEY_ESCAPE && action==GLFW_PRESS){
+        glfwSetWindowShouldClose(m_window, GLFW_TRUE);
+    }
+}
+
+void AtomLauncher::onMouseButton(int button, int action, int mods){
+    if(button == GLFW_MOUSE_BUTTON_LEFT){
+        if (action == GLFW_PRESS){
+            m_addAtomQueued = true;
+        }
+    }
+}
+
+void AtomLauncher::onCursorPosition(double xpos, double ypos){
+    int width, height;
+    glfwGetWindowSize(m_window, &width, &height);
+    
+    // Convert to OpenGL coordinates 
+    float x = (float)xpos / width * 2.0f - 1.0f;
+    float y = 1.0f - (float)ypos / height * 2.0f;
+    m_mouseX = x;
+    m_mouseY = y;
 }
