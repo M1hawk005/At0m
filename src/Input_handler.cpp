@@ -12,7 +12,7 @@ void InputHandler::keyCallback(GLFWwindow* window, int key, int scancode, int ac
     }
 }
 
-void InputHandler::mouse_button_callback(GLFWwindow* window, int button, int action, int mods){
+void InputHandler::mouseButtonCallback(GLFWwindow* window, int button, int action, int mods){
     ImGuiIO& io = ImGui::GetIO();
     if (io.WantCaptureMouse){
         return;

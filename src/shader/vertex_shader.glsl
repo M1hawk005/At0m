@@ -5,5 +5,6 @@ layout(location=1) in vec3 Color;
 out vec3 particleColor;
 void main(){
     gl_Position = vec4(Pos,1.0);
+    gl_PointSize = 10.0;
     particleColor = Color;
 }

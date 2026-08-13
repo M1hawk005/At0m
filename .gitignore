@@ -12,8 +12,12 @@ build/
 
 # Visual Studio files
 .vs/
+x64/
+*.dir/
 *.suo
 *.user
+*.sln
+*.vcxproj
 *.vcxproj.filters
 *.vcxproj.user
 *.ipch
